@@ -2,7 +2,7 @@ package dto
 
 import dto.posttypes.PostType
 
-class Event(
+class Video(
     id: Long,
     author: String,
     content: String,
@@ -15,8 +15,7 @@ class Event(
     sharedByMe: Boolean,
     postType: PostType,
     source: Post? = null,
-    var address: String?,
-    var coordinates: Coordinates? = Coordinates()
+    var url: String? = null
 ) : Post(
     id,
     author,
@@ -30,9 +29,4 @@ class Event(
     sharedByMe,
     postType,
     source
-)
-
-data class Coordinates(
-    val latitude: Double = 0.0,
-    val longitude: Double = 0.0
 )

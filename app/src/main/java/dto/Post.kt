@@ -10,9 +10,9 @@ open class Post(
     var likeCount: Long = 0L,
     var commentCount: Long = 0L,
     var shareCount: Long = 0L,
-    var likedByMe: Boolean,
-    var commentedByMe: Boolean,
-    var sharedByMe: Boolean,
+    var likedByMe: Boolean = false,
+    var commentedByMe: Boolean = false,
+    var sharedByMe: Boolean = false,
     val postType: PostType,
     val source: Post? = null
 )
